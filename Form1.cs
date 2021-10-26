@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 //test comment
 namespace pk1304new
 {
@@ -19,6 +20,25 @@ namespace pk1304new
         public Form1()
         {
             InitializeComponent();
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            server = "192.168.0.23";
+            database = "chat";
+            uid = "mainUser";
+            password = "1234567890";
+            string connectionString;
+            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
+            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + "; SSL Mode=None";
+            try
+            {
+                connection = new MySqlConnection(connectionString);
+                connection.Open();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -47,5 +67,6 @@ namespace pk1304new
             frm.Show();
             this.Hide();
         }
+
     }
 }
