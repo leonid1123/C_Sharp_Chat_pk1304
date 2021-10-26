@@ -1,0 +1,11 @@
+C:\Users\Leo\source\repos\pk1304new\bin\Debug\pk1304new.exe.config
+C:\Users\Leo\source\repos\pk1304new\bin\Debug\pk1304new.exe
+C:\Users\Leo\source\repos\pk1304new\bin\Debug\pk1304new.pdb
+C:\Users\Leo\source\repos\pk1304new\obj\Debug\pk1304new.csproj.AssemblyReference.cache
+C:\Users\Leo\source\repos\pk1304new\obj\Debug\pk1304new.Form1.resources
+C:\Users\Leo\source\repos\pk1304new\obj\Debug\pk1304new.Properties.Resources.resources
+C:\Users\Leo\source\repos\pk1304new\obj\Debug\pk1304new.csproj.GenerateResource.cache
+C:\Users\Leo\source\repos\pk1304new\obj\Debug\pk1304new.csproj.CoreCompileInputs.cache
+C:\Users\Leo\source\repos\pk1304new\obj\Debug\pk1304new.exe
+C:\Users\Leo\source\repos\pk1304new\obj\Debug\pk1304new.pdb
+C:\Users\Leo\source\repos\pk1304new\obj\Debug\pk1304new.Form2.resources
