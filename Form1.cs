@@ -13,20 +13,32 @@ namespace pk1304new
 {
     public partial class Form1 : Form
     {
-        String login = "";
-        String pass = "";
-        String loginOK = "MegaNagibator3000";
-        String passOK = "qwerty";
+        //String login = "";
+        //String pass = "";
+        //String loginOK = "MegaNagibator3000";
+        //String passOK = "qwerty";
+
+        public static MySqlConnection connection;
+
+        private string server;
+        private string database;
+        private string uid;
+        private string password;
+
+        public static String login = "";
+        private String pass = "";
+        public static String userName = "";
+
         public Form1()
         {
             InitializeComponent();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            server = "192.168.0.23";
-            database = "chat";
-            uid = "mainUser";
-            password = "1234567890";
+            server = "127.0.0.1";
+            database = "pk1304";
+            uid = "stud1304";
+            password = "123456";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + "; SSL Mode=None";
@@ -34,6 +46,7 @@ namespace pk1304new
             {
                 connection = new MySqlConnection(connectionString);
                 connection.Open();
+                Console.WriteLine("Подключение успешно");
             }
             catch (MySqlException ex)
             {
@@ -50,15 +63,6 @@ namespace pk1304new
         {//для входа
             login = textBox1.Text;
             pass = textBox2.Text;
-
-            //label4.Text = "login:" + login + " pass:" + pass;
-            if (login==loginOK && pass==passOK)
-            {
-                label4.Text = "всё нормально";
-            } else
-            {
-                label4.Text = "всё НЕ нормально";
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)

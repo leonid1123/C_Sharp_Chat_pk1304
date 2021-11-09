@@ -37,47 +37,53 @@ namespace pk1304new
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
+            this.textBox1.Location = new System.Drawing.Point(16, 15);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(611, 364);
+            this.textBox1.Size = new System.Drawing.Size(813, 447);
             this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 382);
+            this.textBox2.Location = new System.Drawing.Point(16, 470);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(497, 56);
+            this.textBox2.Size = new System.Drawing.Size(661, 68);
             this.textBox2.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(515, 382);
+            this.button1.Location = new System.Drawing.Point(687, 470);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 56);
+            this.button1.Size = new System.Drawing.Size(144, 69);
             this.button1.TabIndex = 2;
             this.button1.Text = "отправить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(629, 12);
+            this.textBox3.Location = new System.Drawing.Point(839, 15);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(159, 426);
+            this.textBox3.Size = new System.Drawing.Size(211, 523);
             this.textBox3.TabIndex = 3;
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form3";
             this.Text = "Чатик";
             this.ResumeLayout(false);
