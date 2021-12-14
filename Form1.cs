@@ -58,8 +58,10 @@ namespace pk1304new
             cmd.Parameters.AddWithValue("param2", pass);
             MySqlDataReader dataReader = cmd.ExecuteReader();
             bool userExist = dataReader.HasRows;
+            dataReader.Close();
             if (userExist)
             {
+                
                 Form3 frm = new Form3();
                 frm.Show();
                 this.Hide();
@@ -68,7 +70,6 @@ namespace pk1304new
             {
                 label4.Text = "Ошибка в имени пользователя или пароле. Возможно Вам нужно зарегистрироваться";
             }
-            dataReader.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)

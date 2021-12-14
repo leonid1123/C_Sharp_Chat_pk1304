@@ -27,6 +27,9 @@ namespace pk1304new
                 int err = cmdIns.ExecuteNonQuery();
                 Console.WriteLine(err);
                 Form1.connection.Close();
+                Form3 frm = new Form3();
+                frm.Show();
+                this.Hide();
             }
         }
 
