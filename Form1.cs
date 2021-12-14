@@ -1,23 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 //test comment
 namespace pk1304new
 {
     public partial class Form1 : Form
     {
-        //String login = "";
-        //String pass = "";
-        //String loginOK = "MegaNagibator3000";
-        //String passOK = "qwerty";
-
         public static MySqlConnection connection;
 
         private string server;
@@ -63,6 +51,23 @@ namespace pk1304new
         {//для входа
             login = textBox1.Text;
             pass = textBox2.Text;
+            string query = "SELECT userlogin, userpass FROM users WHERE userlogin = @param1 AND userpass = @param2 ";
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("param1", login);
+            cmd.Parameters.AddWithValue("param2", pass);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+            bool userExist = dataReader.HasRows;
+            if (userExist)
+            {
+                Form3 frm = new Form3();
+                frm.Show();
+                this.Hide();
+            }
+            else
+            {
+                label4.Text = "Ошибка в имени пользователя или пароле. Возможно Вам нужно зарегистрироваться";
+            }
+            dataReader.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
