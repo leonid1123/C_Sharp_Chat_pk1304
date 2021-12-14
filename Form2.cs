@@ -15,7 +15,7 @@ namespace pk1304new
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {//register button
 
             if (textBox2.Text.Trim() == textBox3.Text.Trim() && !userExist && textBox2.Text != "")
             {
@@ -31,7 +31,11 @@ namespace pk1304new
         }
 
         private void textBox1_Leave(object sender, EventArgs e)
-        {
+        {//user name focus leave
+            if (Form1.connection.State!=System.Data.ConnectionState.Open)
+            {
+                Form1.connection.Open();
+            }
             newLogin = textBox1.Text.Trim();
             string query = "SELECT userlogin FROM users WHERE userlogin = @param1";
             MySqlCommand cmd = new MySqlCommand(query, Form1.connection);

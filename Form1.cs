@@ -34,6 +34,7 @@ namespace pk1304new
             {
                 connection = new MySqlConnection(connectionString);
                 connection.Open();
+                Console.WriteLine(connection.State);
                 Console.WriteLine("Подключение успешно");
             }
             catch (MySqlException ex)

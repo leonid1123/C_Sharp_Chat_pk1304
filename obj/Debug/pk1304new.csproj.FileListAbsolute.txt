@@ -52,3 +52,5 @@ D:\repos\pk1304new\obj\Debug\pk1304new.csproj.CoreCompileInputs.cache
 D:\repos\pk1304new\obj\Debug\pk1304new.csproj.CopyComplete
 D:\repos\pk1304new\obj\Debug\pk1304new.exe
 D:\repos\pk1304new\obj\Debug\pk1304new.pdb
+D:\repos\pk1304new\bin\Debug\MySql.Data.dll
+D:\repos\pk1304new\bin\Debug\MySql.Data.EntityFramework.dll
